@@ -7,32 +7,11 @@ const FirstDiv = () => {
     )
 }
 
-const SecondDiv = () => {
-    return (
+const DataDiv = ({href, anchorText, paraText, paraClass}) => {
+    return(
         <div className = "div-margin">
-            <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the web</a>
-
-            <p className = "p-margin margin-left">Provides a practical introduction to web development for complete beginners.</p>
-        </div>
-    )
-}
-
-const ThirdDiv = () => {
-    return (
-        <div className = "div-margin">
-            <a href = "https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML — Structuring the web</a>
-            
-            <p className = "p-margin margin-left">HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.</p>
-        </div>
-    )
-}
-
-const FourthDiv = () => {
-    return (
-        <div className = "div-margin">
-            <a href = "https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS — Styling the web</a>
-
-            <p className = "p-margin margin-left">CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.</p>
+            <a href = {href}>{anchorText}</a>
+            <p className = {paraClass}>{paraText}</p>
         </div>
     )
 }
@@ -41,9 +20,13 @@ const Data = () => {
     return(
         <div>
             <FirstDiv/>
-            <SecondDiv/>
-            <ThirdDiv/>
-            <FourthDiv/>
+
+            <DataDiv href = "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web" anchorText= "Getting started with the web" paraText = "Provides a practical introduction to web development for complete beginners." paraClass = "p-margin margin-left"/>
+
+            <DataDiv href = "https://developer.mozilla.org/en-US/docs/Learn/HTML" anchorText= "HTML — Structuring the web" paraText = "HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail." paraClass = "p-margin margin-left"/>
+
+            <DataDiv href = "https://developer.mozilla.org/en-US/docs/Learn/CSS" anchorText= "CSS — Styling the web" paraText = "CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS." paraClass = "p-margin margin-left"/>
+            
         </div>
     )
 }
